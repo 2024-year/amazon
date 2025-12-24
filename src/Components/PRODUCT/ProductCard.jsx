@@ -14,7 +14,7 @@ function ProductCard({ product }) {
         <h3>{title}</h3>
         <div className={classes.rating}>
           <Rating value={rating?.rate} precision={0.1} />
-          <small>{rating.count}</small>
+          <small>{rating?.count}</small>
         </div>
         <div className={classes.price}>
           <CurrentFormat amount={price} />

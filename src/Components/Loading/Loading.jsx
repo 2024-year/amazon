@@ -1,6 +1,6 @@
 import React from 'react'
 import {FadeLoader} from 'react-spinners'
-function Loading() {
+const  Loading=()=> {
   return (
     <div style={{display:"flex",
         alignItems:"center",

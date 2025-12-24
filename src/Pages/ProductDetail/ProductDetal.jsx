@@ -16,14 +16,14 @@ function ProductDetal() {
       .then((res) => {
         console.log("ressssssssssss",res.data);
         setProduct(res.data);
-        IsLoading(false)
+        setIsLoading(false)
       })
       .catch((err) => {
         console.log("yyyyyyyy", err);
-        IsLoading(false)
+       setIsLoading(false)
 
       });
-  }, []);
+  }, [productId]);
 
   return (
     <Layout>  

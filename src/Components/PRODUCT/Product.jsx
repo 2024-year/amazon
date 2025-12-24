@@ -11,11 +11,11 @@ const Product = () => {
       .get("https://fakestoreapi.com/products")
       .then((res) => {
         setProducts(res.data);
-        IsLoading(false)
+        setIsLoading(false)
       })
       .catch((err) => {
         console.log(err);
-        IsLoading(false)
+        setIsLoading(true)
       });
   }, []);
   return (
