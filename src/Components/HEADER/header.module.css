@@ -142,15 +142,17 @@ font-size: 11px;
 .cart svg {
   font-size: 40px;
 }
-.cart span {
+.cart span{
   font-size: 16px;
   padding-left: 9px;
 }
 .cart {
+  text-decoration: none;
   padding-right: 10px;
   margin: 4px 0px;
   position: relative;
   width: 50px;
+  color: white;
 }
 
 .delivery:hover,

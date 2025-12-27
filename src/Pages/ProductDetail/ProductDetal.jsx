@@ -11,6 +11,7 @@ function ProductDetal() {
   const { productId } = useParams();
   
   useEffect(() => {
+    // setIsLoading(true);
     axios
       .get(`${productUrl}/products/${productId}`)
       .then((res) => {
@@ -27,7 +28,7 @@ function ProductDetal() {
 
   return (
     <Layout>  
-      {IsLoading?(<Loading/> ): (<ProductCard product={product} />)}
+      {IsLoading?(<Loading/> ): (<ProductCard product={product} flux={true} renderDesc={true}/>)}
       
     </Layout>
   );

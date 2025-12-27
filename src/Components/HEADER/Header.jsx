@@ -6,8 +6,13 @@ import Flag from "./img/america_flag.png";
 import LowerHeader from "./LowerHeader";
 import ShoppingCartIcon from "@mui/icons-material/ShoppingCart";
 import classes from "./header.module.css";
-import {Link} from 'react-router-dom'
+import {Link} from 'react-router-dom';
+import { useContext } from "react";
+import {DataContext} from '../DataProvider/DataContext.jsx'
 const Header = () => {
+  const [{basket},dispatch]=useContext(DataContext)
+  console.log(basket.length)
+  console.log(dispatch)
   return (
     <>
       <section>
@@ -57,7 +62,7 @@ const Header = () => {
           </Link>
 
           <Link to="/cart" className={classes.cart}>
-            <span>0</span>
+            <span>{basket.length}</span>
             <ShoppingCartIcon />
           </Link>
         </div>

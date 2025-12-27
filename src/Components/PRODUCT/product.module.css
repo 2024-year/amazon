@@ -47,3 +47,32 @@
 .products_container section {
   margin: 0 auto;
 }
+.container_flux{
+  box-shadow: none;
+  height: auto;
+  gap: 50px;
+  display: flex;
+  width: 100%;
+}
+.container_flux h3{
+  padding: 20px 0px;
+}
+.container_flux .button{
+  display: block;
+  position: static;
+  width: 150px;
+  margin-right: 40px;
+}
+.container_flux{
+  height: 50vh;
+}
+.container_flux img{
+width: 300px !important;
+height: auto;
+}
+@media screen and (max-width:768px) {
+  .container_flux{
+    display:flex;
+    flex-direction: column;
+  }
+}
