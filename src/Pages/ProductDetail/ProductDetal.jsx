@@ -28,7 +28,7 @@ function ProductDetal() {
 
   return (
     <Layout>  
-      {IsLoading?(<Loading/> ): (<ProductCard product={product} flux={true} renderDesc={true}/>)}
+      {IsLoading?(<Loading/> ): (<ProductCard product={product} flux={true} renderDesc={true} addButton={true}/>)}
       
     </Layout>
   );

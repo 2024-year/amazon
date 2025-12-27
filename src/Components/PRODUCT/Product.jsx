@@ -22,7 +22,7 @@ const Product = () => {
     <>
     {IsLoading?(<Loading/>):(<section className={classes.products_container}>
       {products?.map((singleProduct) => {
-        return <ProductCard product={singleProduct} />;
+        return <ProductCard product={singleProduct} addButton={true}  />;
       })}
     </section>)}
     

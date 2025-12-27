@@ -11,10 +11,11 @@ import { useContext } from "react";
 import {DataContext} from '../DataProvider/DataContext.jsx'
 const Header = () => {
   const [{basket},dispatch]=useContext(DataContext)
-  console.log(basket.length)
-  console.log(dispatch)
+const totalItem=basket?.reduce((amount,item)=>{
+  return item.amount+amount
+},0)
   return (
-    <>
+    <section className={classes.fixed}>
       <section>
         <div className={classes.header_container}>
           <Link className={classes.logo_containers} to="/">
@@ -62,13 +63,13 @@ const Header = () => {
           </Link>
 
           <Link to="/cart" className={classes.cart}>
-            <span>{basket.length}</span>
+            <span>{totalItem}</span>
             <ShoppingCartIcon />
           </Link>
         </div>
       </section>
       <LowerHeader />
-    </>
+    </section>
   );
 };
 
